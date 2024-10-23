@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="text" id="num1" placeholder="Inserisci il primo numero">
+    <input type="text" id="num2" placeholder="Inserisci il secondo numero">
+    <button id="calculateBtn">Calcola Somma</button>
+    <p id="result">Il risultato sarà mostrato qui.</p>
+
+    <script>
+        /*
+            MODIFICA IL CODICE PRESENTE
+            l'obiettivo è visualizzare nell'elemento con id="result" la somma fra i due numeri inseriti dall'utente nei campi di testo num1 e num2
+            Nel codice allegato c'è qualcosa che non va. Trovala e correggila
+        */
+        // Aggiunge un ascoltatore di eventi al pulsante
+        document.querySelector("#calculateBtn").addEventListener("click", function () {
+            // Estrae i valori dai campi di input e li converte in numeri interi
+            let a = document.querySelector("#num1").value
+            let b = document.querySelector("#num2").value;
+
+            // Esegue la somma e mostra il risultato
+            let somma = a + b;
+            document.querySelector("#result").textContent = "La somma è: " + somma;
+        });
+    </script>
+</body>
+
+</html>
