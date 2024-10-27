@@ -13,15 +13,33 @@
     <p id="result">Il risultato sarà mostrato qui.</p>
 
     <script>
-        /*
-        Traccia:
-        1. Usa `querySelector` per selezionare i campi di input e i pulsanti.
-        2. Usa `addEventListener()` per assegnare un'azione ai pulsanti quando vengono cliccati.
-        3. Ogni pulsante eseguirà una delle seguenti operazioni: somma, sottrazione, moltiplicazione o divisione.
-        4. Usa `parseInt()` per convertire i valori degli input da stringhe a numeri.
-        5. Mostra il risultato dell'operazione nel paragrafo con id "result".
-        6. Gestisci eventuali errori, come la divisione per zero.
-      */
+        function Numbers(){
+            let a = parseFloat(document.querySelector("#num1").value);
+            let b = parseFloat(document.querySelector("#num2").value);
+            return { a, b};
+    }
+        document.querySelector("#addBtn).addEventListener("click",function (){
+            let { a, b } = Numbers();
+            let result = a + b;
+            document.querySelector("#result").textContent = "La somma è: " + result;            
+        }
+          document.querySelector("#subBtn).addEventListener("click",function (){
+            let { a, b } = Numbers();
+            let result = a - b;
+            document.querySelector("#result").textContent = "La sottrazione è: " + result;            
+        }
+           document.querySelector("#mulBtn).addEventListener("click",function (){
+           let { a, b } = Numbers();
+           let result = a * b;
+           document.querySelector("#result").textContent = "La moltiplicazione è: " + result;         
+        }
+            document.querySelector("#divBtn).addEventListener("click",function (){
+            if (b === 0) {
+                document.querySelector("#result").textContent = "Errore: Divisione Impossibile";
+            }
+            let { a, b } = Numbers();
+            let result = a / b;
+            document.querySelector("#result").textContent = "La divisione è: " + result;            
 
     </script>
 </body>
