@@ -16,8 +16,8 @@
         // Aggiunge un ascoltatore di eventi al pulsante
         document.querySelector("#calculateBtn").addEventListener("click", function () {
             // Estrae i valori dai campi di input e li converte in numeri interi
-            let a = document.querySelector("#num1").value
-            let b = document.querySelector("#num2").value;
+            let a = parseFloat(document.querySelector("#num1").value);
+            let b = parseFloat(document.querySelector("#num2").value);
 
             // Esegue la somma e mostra il risultato
             let somma = a + b;
